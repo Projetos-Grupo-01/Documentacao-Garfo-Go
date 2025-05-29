@@ -1,0 +1,173 @@
+type: collection.insomnia.rest/5.0
+name: Garfo&Go
+meta:
+  id: wrk_18730568f0494f5da3aa532a45d5f926
+  created: 1748529677956
+  modified: 1748529677956
+collection:
+  - name: Produto
+    meta:
+      id: fld_dd1044a6a39840aeb1220ab26f74187d
+      created: 1748529677967
+      modified: 1748529677967
+      sortKey: -1748407314488
+    children:
+      - url: "{{ _[''].base_url }}/produtos/1"
+        name: GET BY ID Produto
+        meta:
+          id: req_517e2e1a98eb42d08646a65daa266b8b
+          created: 1748529677967
+          modified: 1748529677967
+          isPrivate: false
+          sortKey: -1748407319698
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _[''].base_url }}/produtos"
+        name: GET ALL Produtos
+        meta:
+          id: req_7f9210c6a4b34e549cdc8ddea0cb3f74
+          created: 1748529677968
+          modified: 1748529677968
+          isPrivate: false
+          sortKey: -1748407319798
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _[''].base_url }}/produtos"
+        name: POST Produto
+        meta:
+          id: req_9b271d162a3e40f5bb04af2f00df46b2
+          created: 1748529677969
+          modified: 1748530013983
+          isPrivate: false
+          sortKey: -1748406239833
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Pizza de Calabresa",
+            	"descricao": "Calabresa",
+            	"preco": 89.90,
+            	"restaurante": "Pizza & Co"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _[''].base_url }}/produtos/nome/pi"
+        name: GET BY NOME Produto
+        meta:
+          id: req_a8a672a520254b498ec05361ed2634e2
+          created: 1748529677969
+          modified: 1748529965577
+          isPrivate: false
+          sortKey: -1748406239933
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _[''].base_url }}/produtos"
+        name: PUT Produto
+        meta:
+          id: req_8ad0f217dae048ce8192280af1498111
+          created: 1748529677970
+          modified: 1748529990784
+          isPrivate: false
+          sortKey: -1748406239733
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"id": 1,
+            	"nome": "Pizza de Portuguesa",
+            	"descricao": "Presunto, queijo mussarela, palmito, ovo, ervilha e tomate",
+            	"preco": 99.90,
+            	"restaurante": "Pizza & Co"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _[''].base_url }}/produtos/2"
+        name: DELETE Produto
+        meta:
+          id: req_192781ec4bc14d12adb0aa92ddd98bcb
+          created: 1748529677971
+          modified: 1748529677971
+          isPrivate: false
+          sortKey: -1748406239633
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_1053379643b14686b4152cee6fb28a4a
+    created: 1748529677959
+    modified: 1748529677959
+environments:
+  name: Base Environment
+  meta:
+    id: env_ea9ff63e582c48a3994c67e411d78a96
+    created: 1748529677957
+    modified: 1748529677957
+    isPrivate: false
+  data:
+    "":
+      base_url: http://localhost:8080
